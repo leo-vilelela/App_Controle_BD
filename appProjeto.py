@@ -359,7 +359,7 @@ if (acesso == "1" ):
         user = input("Digite o nome de Usuário: \n")
         
         x = x+1
-        cursor.execute("SELECT * FROM usuarios WHERE usuario = '"+user+"' ")
+        cursor.execute("SELECT * FROM usuarios WHERE usuario = '"+user.lower()+"' ")
         login= cursor.fetchall()
         if login != []:
             print("\n")
