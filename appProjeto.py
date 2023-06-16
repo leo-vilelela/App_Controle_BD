@@ -208,7 +208,7 @@ def excluirCliente():
             print("-----------------------------------------------------------------------------\n")
             break
         else:
-            cursor.execute("SELECT rowid, * FROM clientes WHERE rowid = (?)",str(pesquisar))            
+            cursor.execute("SELECT rowid, * FROM clientes WHERE rowid ='"+str(pesquisar)+"'")            
             rows= cursor.fetchall()
             print("\n-----------------------------------------------------------------------------")
             print("Tem certeza que deseja excluir este cliente?:")
@@ -297,7 +297,7 @@ def pClt():
             break
         else:
             print('\n\n')
-            cursor.execute("SELECT rowid, * FROM clientes WHERE rowid = (?)",str(pCliente))             
+            cursor.execute("SELECT rowid, * FROM clientes WHERE rowid = '"+str(pCliente)+"'")             
             rows= cursor.fetchall()  
             for row in rows:
                 print("___________________________________________________________________________________________________________________\n")
